@@ -1,0 +1,27 @@
+{
+    "name": "YouTube Useful Fullscreen",
+    "version": "1.0",
+    "description": "Open a YouTube video in a new dark tab, taking 100% space in the tab. Watch in fullscreen but keep access to your tabs.",
+    "manifest_version": 2,
+	"author": "Jean-Simon Cormier",
+	
+	"browser_action": {
+        "default_icon": {
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "128": "images/icon128.png"
+    },
+	
+	"background" : {
+		"scripts": [
+			"js/script.js"
+		],
+		"persistent": false
+	},
+	
+	"permissions": [
+		"activeTab"
+	]
+}
