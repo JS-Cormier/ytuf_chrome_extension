@@ -3,6 +3,7 @@ chrome.browserAction.onClicked.addListener(function(activeTab) {
 		window.alert("You must be on a YouTube video page for this to work!");
 	} else {
 		embedUrl = activeTab.url.replace("/watch?v=", "/embed/");
-		chrome.tabs.create({url: embedUrl});
+		var trimmedUrl = embedUrl.split("&")[0];
+		chrome.tabs.create({url: trimmedUrl});
 	}
 });
